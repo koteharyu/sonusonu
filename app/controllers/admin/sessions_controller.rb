@@ -5,7 +5,7 @@ class Admin::SessionsController < ApplicationController
 
   def create
     @user = login(params[:email], params[:password])
-    if @user
+    if @user.admin
       redirect_back_or_to admin_path, success: "管理者としてログイン中..."
     else
       flash.now[:danger] = "メアドかパスワードに誤りがあります"
