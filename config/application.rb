@@ -38,11 +38,13 @@ module Sonusonu
     # Don't generate system test files.
     config.generators.system_tests = nil
     config.generators.template_engine = :slim
-
+    config.i18n.default_locale = :ja
+    config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}').to_s]
     config.generators do |g|
       g.skip_routes true
       g.assets false
       g.helper false
     end
   end
+
 end
