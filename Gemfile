@@ -38,8 +38,8 @@ gem 'rails-i18n'
 gem 'annotate'
 gem 'sorcery'
 gem 'bootstrap', '~> 5.1.0'
-gem 'jquery-rails'
 gem 'popper_js', '~> 2.9.3'
+gem 'font-awesome-sass'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
