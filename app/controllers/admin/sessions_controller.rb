@@ -1,7 +1,6 @@
 class Admin::SessionsController < ApplicationController
 
   def new
-
   end
 
   def create
@@ -9,7 +8,8 @@ class Admin::SessionsController < ApplicationController
     if @user
       redirect_back_or_to admin_path, success: "管理者としてログイン中..."
     else
-      flash.now[:danger] = "ログインに失敗しました"
+      flash.now[:danger] = "メアドかパスワードに誤りがあります"
+      render :new
     end
   end
 
