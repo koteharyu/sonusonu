@@ -1,9 +1,12 @@
-= form_with url: admin_login_path do |f|
-  = f.label :email
-  = f.email_field :email
-  = f.label :password
-  = f.password_field :password
-  = f.submit
+.card
+  = form_with url: admin_login_path do |f|
+    .form-group
+      = f.label :email
+      = f.email_field :email, class: 'form-control'
+    .form-group
+      = f.label :password
+      = f.password_field :password, class: 'form-control'
+    = f.submit class: 'btn btn-primary'
 
 - if logged_in?
   = link_to "logout", admin_logout_path, method: :delete
