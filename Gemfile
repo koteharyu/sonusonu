@@ -36,6 +36,7 @@ gem 'slim-rails'
 gem 'html2slim'
 gem 'rails-i18n'
 gem 'annotate'
+gem 'sorcery'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
