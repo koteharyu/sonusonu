@@ -4,3 +4,6 @@
   = f.label :password
   = f.password_field :password
   = f.submit
+
+- if logged_in?
+  = link_to "logout", admin_logout_path, method: :delete
