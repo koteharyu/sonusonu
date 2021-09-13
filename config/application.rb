@@ -24,6 +24,9 @@ module Sonusonu
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.1
 
+    config.time_zone = 'Tokyo'
+    config.active_record.default_timezone = :local
+
     # Configuration for the application, engines, and railties goes here.
     #
     # These settings can be overridden in specific environments using the files
@@ -34,5 +37,14 @@ module Sonusonu
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+    config.generators.template_engine = :slim
+    config.i18n.default_locale = :ja
+    config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}').to_s]
+    config.generators do |g|
+      g.skip_routes true
+      g.assets false
+      g.helper false
+    end
   end
+
 end
