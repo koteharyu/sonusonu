@@ -11,3 +11,6 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-light
           = link_to "Menu", "#", class: 'nav-link'
         li.nav-item
           = link_to "Contact", "#", class: 'nav-link'
+        - if logged_in?
+          li.nav-item
+            = link_to "logout", admin_logout_path, class: 'nav-link', method: :delete

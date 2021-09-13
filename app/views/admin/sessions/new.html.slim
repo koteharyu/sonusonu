@@ -7,6 +7,3 @@
       = f.label :password
       = f.password_field :password, class: 'form-control'
     = f.submit class: 'btn btn-primary'
-
-- if logged_in?
-  = link_to "logout", admin_logout_path, method: :delete
