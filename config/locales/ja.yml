@@ -1,0 +1,10 @@
+activerecord:
+  models:
+    user:
+  attributues:
+    user:
+      email: 'メールアドレス'
+      name: 'ユーザー名'
+      password: 'パスワード'
+      password_confirmation: '確認用'
+      admin: 'ともき？'

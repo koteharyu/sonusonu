@@ -1,0 +1,16 @@
+nav.navbar.navbar-expand-lg.navbar-light.bg-light
+  div.container-fluid
+    = link_to "sonusonu", "#", class: 'navbar-brand'
+    button.navbar-toggler type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label=("Toggle navigation")
+      span.navbar-toggler-icon
+    div.collapse.navbar-collapse#navbarNav
+      ul.navbar-nav
+        li.nav-item
+          = link_to "Home", "#", class: 'nav-link'
+        li.nav-item
+          = link_to "Menu", "#", class: 'nav-link'
+        li.nav-item
+          = link_to "Contact", "#", class: 'nav-link'
+        - if logged_in?
+          li.nav-item
+            = link_to "logout", admin_logout_path, class: 'nav-link', method: :delete
